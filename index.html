@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS</title>
+</head>
+<body>
+    <script>
+
+            
+            function computerPlay() {
+                
+                let randomNumber = (Math.random() * 10)
+
+            if (randomNumber <= 3.33) { 
+                return 'rock' 
+            } 
+            else if (randomNumber <= 6.66) {
+                return 'paper'
+            } 
+            else if (randomNumber <= 10) {
+                return 'scissors'
+            }
+
+            }
+
+            const computerSelection = computerPlay();
+            
+            console.log(computerSelection)
+
+
+            const playerSelection = prompt('Please choose your weapon').toLowerCase();
+            
+            //const playerSelection = 'rock';
+            console.log(playerSelection);
+            
+    
+
+
+            function playRound(playerSelection, computerSelection) {
+
+                if (playerSelection === 'rock' && computerSelection === 'paper') {
+                   return alert("You Lose! Paper swallows Rock");
+                }
+
+                else if (playerSelection === 'rock' && computerSelection === 'scissors') {
+                    return alert("You Win! Rock crushes Scissors")
+                }
+                
+                else if (playerSelection === 'rock' && computerSelection === 'rock') {
+                    return alert("Tie!")
+                }
+
+
+                else if (playerSelection === 'scissors' && computerSelection === 'rock') {
+                   return alert("You Lose! Rock crushes Scissors");
+                }
+
+                else if (playerSelection === 'scissors' && computerSelection === 'paper') {
+                    return alert("You Win! Scissors slices Paper")
+                }
+                
+                else if (playerSelection === 'scissors' && computerSelection === 'scissors') {
+                    return alert("Tie!")
+                }
+                
+
+                else if (playerSelection === 'paper' && computerSelection === 'scissors') {
+                   return alert("You Lose! Scissors slices Paper");
+                }
+
+                else if (playerSelection === 'paper' && computerSelection === 'rock') {
+                    return alert("You Win! Paper swallows Rock")
+                }
+                
+                else if (playerSelection === 'paper' && computerSelection === 'paper') {
+                    return alert("Tie!")
+                }
+
+                else if (playerSelection !== 'scissors', 'paper', 'rock') { return alert ("Spelt incorrectly? or gtfo")}
+                }
+                
+                
+                //playRound(playerSelection, computerSelection);
+
+                function game() {
+                    
+                }
+            
+            
+            
+            
+        
+
+        
+    </script>
+</body>
+</html>
