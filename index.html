@@ -9,7 +9,18 @@
 <body>
     <script>
 
+                let winScore = 0;
+                let loseScore = 0; 
+                let tieScore = 0;
 
+                function results() {
+                if (winScore + loseScore + tieScore == 5) {
+                    return alert("Congratulations, you are a winner baby!")
+                }
+                
+            }
+
+            results();
             
     function game() {
 
@@ -48,7 +59,7 @@
                 
                 
 
-            function playRound(playerSelection, computerSelection) {
+            function playRound() {
                 
                 
                 
@@ -98,48 +109,62 @@
                 }
                 
                 
-                playRound(playerSelection, computerSelection);
+                playRound();
 
+                
 
-                function score(playerSelection, computerSelection) {
-
-let winScore = 0;
-let loseScore = 0;
-let realScore = winScore + ':' + loseScore;
+                function score() {
 
 
 if (playerSelection === 'rock' && computerSelection === 'paper') {
-    return loseScore++                   
+    loseScore++
+    return alert(winScore + " : " + tieScore + " : " + loseScore)                    
 
 }
 
 else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-    return winScore++ 
+    winScore++ 
+    return alert(winScore + " : " + tieScore + " : " + loseScore) 
 }
 
 
+else if (playerSelection === 'rock' && computerSelection === 'rock') {
+    tieScore++                
+    return alert(winScore + " : " + tieScore + " : " + loseScore)
+}
+
 else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-    return loseScore++
-   
+    loseScore++
+    return alert(winScore + " : " + tieScore + " : " + loseScore) 
 }
 
 else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-    return winScore++
+    winScore++
+    return alert(winScore + " : " + tieScore + " : " + loseScore) 
+}
+
+else if (playerSelection === 'scissors' && computerSelection === 'scissors') {
+    tieScore++                
+    return alert(winScore + " : " + tieScore + " : " + loseScore) 
 }
 
 else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-    return loseScore++
+    loseScore++
+    return alert(winScore + " : " + tieScore + " : " + loseScore) 
    
 }
 
 else if (playerSelection === 'paper' && computerSelection === 'rock') {
-    return winScore++
+    winScore++
+    return alert(winScore + " : " + tieScore + " : " + loseScore) 
 }
-    console.log(realScore);
-    
-    console.log(playerSelection); 
-    console.log(computerSelection);   
+
+else if (playerSelection === 'paper' && computerSelection === 'paper') {
+    tieScore++                
+    return alert(winScore + " : " + tieScore + " : " + loseScore) 
 }
+      
+} 
 
 score();
 
