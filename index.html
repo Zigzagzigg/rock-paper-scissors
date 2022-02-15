@@ -9,6 +9,13 @@
 <body>
     <script>
 
+
+            
+    function game() {
+
+        for (let i = 0; i < 5; i++) {
+
+                
             
             function computerPlay() {
                 
@@ -26,6 +33,8 @@
 
             }
 
+
+            
             const computerSelection = computerPlay();
             
             console.log(computerSelection)
@@ -33,15 +42,20 @@
 
             const playerSelection = prompt('Please choose your weapon').toLowerCase();
             
-            //const playerSelection = 'rock';
+            
             console.log(playerSelection);
             
-    
+                
+                
 
             function playRound(playerSelection, computerSelection) {
-
+                
+                
+                
                 if (playerSelection === 'rock' && computerSelection === 'paper') {
-                   return alert("You Lose! Paper swallows Rock");
+                    return alert("You Lose! Paper swallows Rock");
+                   
+
                 }
 
                 else if (playerSelection === 'rock' && computerSelection === 'scissors') {
@@ -54,7 +68,7 @@
 
 
                 else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-                   return alert("You Lose! Rock crushes Scissors");
+                    return alert("You Lose! Rock crushes Scissors");
                 }
 
                 else if (playerSelection === 'scissors' && computerSelection === 'paper') {
@@ -67,7 +81,7 @@
                 
 
                 else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-                   return alert("You Lose! Scissors slices Paper");
+                    return alert("You Lose! Scissors slices Paper");
                 }
 
                 else if (playerSelection === 'paper' && computerSelection === 'rock') {
@@ -78,15 +92,63 @@
                     return alert("Tie!")
                 }
 
-                else if (playerSelection !== 'scissors', 'paper', 'rock') { return alert ("Spelt incorrectly? or gtfo")}
+                else if (playerSelection !== 'scissors', 'paper', 'rock') { 
+                    return alert ("Spelt incorrectly? or gtfo")}
+         
                 }
                 
                 
                 playRound(playerSelection, computerSelection);
 
-                function game() {
 
+                function score(playerSelection, computerSelection) {
+
+let winScore = 0;
+let loseScore = 0;
+let realScore = winScore + ':' + loseScore;
+
+
+if (playerSelection === 'rock' && computerSelection === 'paper') {
+    return loseScore++                   
+
+}
+
+else if (playerSelection === 'rock' && computerSelection === 'scissors') {
+    return winScore++ 
+}
+
+
+else if (playerSelection === 'scissors' && computerSelection === 'rock') {
+    return loseScore++
+   
+}
+
+else if (playerSelection === 'scissors' && computerSelection === 'paper') {
+    return winScore++
+}
+
+else if (playerSelection === 'paper' && computerSelection === 'scissors') {
+    return loseScore++
+   
+}
+
+else if (playerSelection === 'paper' && computerSelection === 'rock') {
+    return winScore++
+}
+    console.log(realScore);
+    
+    console.log(playerSelection); 
+    console.log(computerSelection);   
+}
+
+score();
+
+                
                 }
+                }
+
+                game();
+                
             
             
             
