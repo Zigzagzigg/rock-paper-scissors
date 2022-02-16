@@ -12,16 +12,7 @@
                 let winScore = 0;
                 let loseScore = 0; 
                 let tieScore = 0;
-
-                function results() {
-                if (winScore + loseScore + tieScore == 5) {
-                    return alert("Congratulations, you are a winner baby!")
-                }
-                
-            }
-
-            results();
-            
+ 
     function game() {
 
         for (let i = 0; i < 5; i++) {
@@ -56,9 +47,6 @@
             
             console.log(playerSelection);
             
-                
-                
-
             function playRound() {
                 
                 
@@ -168,6 +156,20 @@ else if (playerSelection === 'paper' && computerSelection === 'paper') {
 
 score();
 
+            function results() {
+                if (winScore + loseScore + tieScore === 5 && winScore > loseScore) {
+                    return alert("Congratulations, you are a winner baby!")
+                }
+
+                else if (winScore + loseScore + tieScore === 5 && winScore < loseScore) {
+                    return alert("You lose, game over.")
+                }
+
+                else if (winScore + loseScore + tieScore === 5 && winScore === loseScore)
+                    return alert("Tie game? Really? Game over")
+            }
+            
+            results();
                 
                 }
                 }
