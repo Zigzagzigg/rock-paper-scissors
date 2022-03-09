@@ -82,7 +82,7 @@
 
             window.addEventListener('click', function(e) {
                 computerSelection = computerPlay();
-                console.log(computerSelection)                
+                //console.log(computerSelection)                
                 const button = document.querySelector('button')
                 playerSelection = e.target.className;
                 
