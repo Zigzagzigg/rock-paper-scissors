@@ -5,184 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPS</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script>
+  <div id="container">
+    <h1>Best of Five</h1> 
+    <!-- <h2 class="scoreBoard">Score</h2> -->
 
-                let winScore = 0;
-                let loseScore = 0; 
-                let tieScore = 0;
- 
-    function game() {
+    <div class="buttons">
+    <button class='rock'>👊</button>
+    <button class='paper'>🖐</button>
+    <button class='scissors'>✌</button>
+</div>
+    </div>
 
-        for (let i = 0; i < 5; i++) {
-
-                
-            
-            function computerPlay() {
-                
-                let randomNumber = (Math.random() * 10)
-
-            if (randomNumber <= 3.33) { 
-                return 'rock' 
-            } 
-            else if (randomNumber <= 6.66) {
-                return 'paper'
-            } 
-            else if (randomNumber <= 10) {
-                return 'scissors'
-            }
-
-            }
-
-
-            
-            const computerSelection = computerPlay();
-            
-            console.log(computerSelection)
-
-
-            const playerSelection = prompt('Please choose your weapon').toLowerCase();
-            
-            
-            console.log(playerSelection);
-            
-            function playRound() {
-                
-                
-                
-                if (playerSelection === 'rock' && computerSelection === 'paper') {
-                    return alert("You Lose! Paper swallows Rock");
-                   
-
-                }
-
-                else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-                    return alert("You Win! Rock crushes Scissors")
-                }
-                
-                else if (playerSelection === 'rock' && computerSelection === 'rock') {
-                    return alert("Tie!")
-                }
-
-
-                else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-                    return alert("You Lose! Rock crushes Scissors");
-                }
-
-                else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-                    return alert("You Win! Scissors slices Paper")
-                }
-                
-                else if (playerSelection === 'scissors' && computerSelection === 'scissors') {
-                    return alert("Tie!")
-                }
-                
-
-                else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-                    return alert("You Lose! Scissors slices Paper");
-                }
-
-                else if (playerSelection === 'paper' && computerSelection === 'rock') {
-                    return alert("You Win! Paper swallows Rock")
-                }
-                
-                else if (playerSelection === 'paper' && computerSelection === 'paper') {
-                    return alert("Tie!")
-                }
-
-                else if (playerSelection !== 'scissors', 'paper', 'rock') { 
-                    return alert ("Spelt incorrectly? or gtfo")}
-         
-                }
-                
-                
-                playRound();
-
-                
-
-                function score() {
-
-
-if (playerSelection === 'rock' && computerSelection === 'paper') {
-    loseScore++
-    return alert(winScore + " : " + tieScore + " : " + loseScore)                    
-
-}
-
-else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-    winScore++ 
-    return alert(winScore + " : " + tieScore + " : " + loseScore) 
-}
-
-
-else if (playerSelection === 'rock' && computerSelection === 'rock') {
-    tieScore++                
-    return alert(winScore + " : " + tieScore + " : " + loseScore)
-}
-
-else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-    loseScore++
-    return alert(winScore + " : " + tieScore + " : " + loseScore) 
-}
-
-else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-    winScore++
-    return alert(winScore + " : " + tieScore + " : " + loseScore) 
-}
-
-else if (playerSelection === 'scissors' && computerSelection === 'scissors') {
-    tieScore++                
-    return alert(winScore + " : " + tieScore + " : " + loseScore) 
-}
-
-else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-    loseScore++
-    return alert(winScore + " : " + tieScore + " : " + loseScore) 
-   
-}
-
-else if (playerSelection === 'paper' && computerSelection === 'rock') {
-    winScore++
-    return alert(winScore + " : " + tieScore + " : " + loseScore) 
-}
-
-else if (playerSelection === 'paper' && computerSelection === 'paper') {
-    tieScore++                
-    return alert(winScore + " : " + tieScore + " : " + loseScore) 
-}
-      
-} 
-
-score();
-
-            function results() {
-                if (winScore + loseScore + tieScore === 5 && winScore > loseScore) {
-                    return alert("Congratulations, you are a winner baby!")
-                }
-
-                else if (winScore + loseScore + tieScore === 5 && winScore < loseScore) {
-                    return alert("You lose, game over.")
-                }
-
-                else if (winScore + loseScore + tieScore === 5 && winScore === loseScore)
-                    return alert("Tie game? Really? Game over")
-            }
-            
-            results();
-                
-                }
-                }
-
-                game();
-                
-            
-            
-            
-            
-        
-
-        
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
